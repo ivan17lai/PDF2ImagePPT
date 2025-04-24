@@ -3,6 +3,12 @@ async function convert() {
     if (!input) return alert('請選擇 PDF 檔案');
 
     document.getElementById('status').textContent = '載入 PDF 中...';
+    if (input.type !== 'application/pdf') {
+        rehandleFileUpload();
+        return alert('請選擇 PDF 檔案');
+
+    }
+    
     const download_file_block = document.getElementById('pptx-file');
 
     const file_container = document.querySelector('.file-container');
