@@ -35,7 +35,7 @@ async function convert() {
 
         const displayCanvas = document.createElement('canvas');
         const displayContext = displayCanvas.getContext('2d');
-        displayCanvas.width = canvas.width / 3; // 縮小顯示
+        displayCanvas.width = canvas.width / 3;
         displayCanvas.height = canvas.height / 3;
         displayContext.drawImage(canvas, 0, 0, displayCanvas.width, displayCanvas.height);
 
